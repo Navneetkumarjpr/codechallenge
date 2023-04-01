@@ -1,0 +1,29 @@
+
+
+
+function fizz(n){
+    let ans = []
+    let sum = 0;
+    for(let i=0;i<n.length;i++){
+      sum=sum+parseInt(n.charAt(i));
+    }
+    for(let i =1;i<=sum;i++){
+      if(i%3==0 && i%4==0){
+        ans.push("FizzBuzz")
+      }else  if(i%3==0){
+        ans.push("Fizz")
+      }else if(i%4==0){
+        ans.push("Buzz")
+      }else{
+        ans.push(i);
+      }
+    }
+    return ans;
+}
+
+let res = fizz("90000007");
+let s = "";
+ for(let i=0;i<res.length;i++){
+    s=s+res[i]+" ";
+  }
+  console.log(s);
